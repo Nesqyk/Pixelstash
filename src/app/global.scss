@@ -1,0 +1,22 @@
+:root {
+  --color-mustard: #D7C500;
+  --color-dark-mustard: #6D6400;
+  --color-charcoal: #222222;
+  --color-text-dark: #212121;
+  --color-white: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+  background-color: var(--color-mustard);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+// Responsive container for main content
+
