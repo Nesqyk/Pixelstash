@@ -1,0 +1,53 @@
+@import '../../../app/global.scss';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20vw;
+    width: 1300px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0px 16px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    @media (max-width: 1400px) {
+        width: 100%;
+    }
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logoText {
+    font-family: var(--font-gasoek-one), sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    color: var(--color-text-dark);
+    margin: 0;
+    line-height: normal;
+    white-space: nowrap;
+
+    @media (max-width: 768px) {
+        font-size: 48px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 36px;
+    }
+}
+
+
+
+// This class targets the "ABOUT" link specifically
+.hideOnMobile {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}

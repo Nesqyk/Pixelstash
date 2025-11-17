@@ -1,0 +1,51 @@
+@import '../../../app/global.scss';
+
+.customButton { 
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border-width: 3px;
+  border-style: solid;
+  cursor: pointer;
+  font-family: var(--font-geist-sans), sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  transform-origin: center;
+  height: 58px;
+  text-decoration: none;
+  
+  &.defaultButton { 
+    background-color: var(--color-mustard);
+    border-color: var(--color-dark-mustard);
+    color: var(--color-charcoal);
+  }
+
+  &.ctaButton { 
+    background-color: var(--color-charcoal);
+    border-color: var(--color-mustard);
+    color: var(--color-mustard);
+  }
+
+  .buttonText {
+    position: relative;
+    z-index: 2;
+  }
+
+  .buttonFill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: 1;
+    background-color: transparent;
+  }
+}

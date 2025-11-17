@@ -1,0 +1,118 @@
+@import '../../../app/global.scss';
+
+.footer {
+    color: var(--color-charcoal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; 
+
+
+    > :global(.Logo) { 
+        width: 80vw;
+        max-width: 80vw;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: 900; 
+
+        @media (min-width: 768px) {
+        }
+    }
+
+    .content {
+        width: 1300px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(34, 34, 34, 0.3);
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+
+
+        .copyright {
+            p {
+                font-family: var(--font-geist-sans), sans-serif;
+                font-size: 22px;
+                font-weight: 700;
+                line-height: normal;
+                color: var(--color-text-dark);
+                text-transform: uppercase;
+                margin: 0;
+                width: 398px;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                    font-size: 18px;
+                    margin-bottom: 1rem;
+                }
+                
+                span {
+                    font-weight: 700;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .nav {
+            display: flex;
+            gap: 32px;
+            align-items: flex-start;
+            
+            @media (max-width: 768px) {
+                flex-direction: column;
+                gap: 24px;
+                width: 100%;
+            }
+
+            .linkGroup {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .footerButton {
+                text-decoration: none;
+                
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .stackedText {
+        position: absolute;
+        bottom: 2rem;
+        right: 5%;
+        opacity: 0.1;
+        z-index: 0; 
+
+        display: none;
+
+        @media (min-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            font-size: 2rem;
+            line-height: 1.2;
+            pointer-events: none; 
+        }
+
+        .stackItem {
+            font-weight: 900;
+        }
+    }
+}

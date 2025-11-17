@@ -1,0 +1,21 @@
+.staggerButton {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: var(--font-geist-sans);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 21.5px;
+  color: #060a0d;
+  text-align: left;
+  font-variation-settings: 'opsz' 14, 'wdth' 100;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.letter {
+  display: inline-block;
+  position: relative; 
+}

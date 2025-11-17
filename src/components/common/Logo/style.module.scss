@@ -1,0 +1,43 @@
+@import '../../../app/global.scss';
+
+.logoFull {
+  width: 100%;
+  height: auto;
+  max-width: 536px;
+  display: block;
+
+  @media (max-width: 1024px) {
+    max-width: 400px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 320px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 240px;
+  }
+}
+
+.logoFooter {
+  width: 100%;
+  height: auto;
+  max-width: 90vw;
+  display: block;
+
+  @media (min-width: 1400px) {
+    max-width: 1200px;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 85vw;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 80vw;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 75vw;
+  }
+}

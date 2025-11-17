@@ -1,0 +1,71 @@
+@import '../../../app/global.scss';
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modalContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1243px;
+  max-height: 90vh;
+  background-color: var(--color-mustard);
+  border: 3px solid var(--color-charcoal);
+  border-radius: 32px;
+  padding: 64px;
+  display: flex;
+  gap: 107px;
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .modalContainer {
+    flex-direction: column;
+    gap: 40px;
+    max-height: 95vh;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modalContainer {
+    padding: 24px;
+    gap: 24px;
+    border-radius: 16px;
+  }
+}
+
