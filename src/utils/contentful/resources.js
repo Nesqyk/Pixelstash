@@ -47,10 +47,12 @@ const transformResource = (entry) => {
     languages: fields.pixelStatshResourceMetadataStructure || fields.languages || [],
     officialWebsite: fields.officialWebsite ? extractUrl(fields.officialWebsite) : '',
     officialWebsiteRichText: fields.officialWebsite || null,
-    socialMedia: fields.socialMedia ? Object.entries(fields.socialMedia).map(([platform, url]) => ({
-      platform,
-      url: url || ''
-    })) : [],
+    socialMedia: fields.socialMedia && Object.keys(fields.socialMedia).length > 0
+      ? Object.entries(fields.socialMedia).map(([platform, url]) => ({
+          platform,
+          url: url || ''
+        }))
+      : [],
     icon: fields.icon?.fields?.file?.url ? `https:${fields.icon.fields.file.url}` : '',
     screenshots: (fields.screenshots || [])
       .map(asset => asset?.fields?.file?.url ? `https:${asset.fields.file.url}` : null)
