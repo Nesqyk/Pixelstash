@@ -6,6 +6,7 @@ import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 import { getResourceBySlug } from '@/utils/contentful/resources'
 import Button from '../Button'
 import Tag from '@/components/ui/Tag'
+import Gallery from '../Gallery'
 import style from './style.module.scss'
 
 const richTextOptions = {
@@ -236,26 +237,12 @@ export default function ResourceDetail({ resource, resourceSlug, onClose, isModa
 
           {/* Screenshots Gallery */}
           {currentResource.screenshots?.length > 0 && (
-            <Section title="Screenshots" className={style.screenshotsSection}>
-              <div className={style.screenshotsGrid}>
-                {currentResource.screenshots.slice(0, 2).map((screenshot, index) => (
-                  <div key={index} className={style.screenshotItem}>
-                    <img
-                      src={screenshot}
-                      alt={`${currentResource.title} screenshot ${index + 1}`}
-                      className={style.screenshotImage}
-                    />
-                  </div>
-                ))}
-                {currentResource.screenshots.length > 2 && (
-                  <div className={style.screenshotItem}>
-                    <div className={style.moreScreenshots}>
-                      <span className={style.moreCount}>+{currentResource.screenshots.length - 2}</span>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </Section>
+            <div className={style.screenshotsSection}>
+              <Gallery
+                screenshots={currentResource.screenshots}
+                title="Screenshots"
+              />
+            </div>
           )}
         </div>
       </div>

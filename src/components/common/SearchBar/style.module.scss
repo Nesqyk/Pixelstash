@@ -1,11 +1,9 @@
 @import '../../../app/global.scss';
-
 .searchBar {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
   height: 58px;
   padding: 0 32px;
   border: 3px solid var(--color-dark-mustard);
@@ -13,17 +11,6 @@
   background-color: var(--color-white);
   box-sizing: border-box;
 
-  @media (max-width: 768px) {
-    width: 1000px;
-    height: 50px;
-    padding: 0 20px;
-    border-width: 2px;
-  }
-
-  @media (max-width: 480px) {
-    height: 46px;
-    padding: 0 16px;
-  }
 }
 
 .searchIcon {
@@ -57,7 +44,7 @@
   font-weight: 700;
   font-size: 16px;
   color: var(--color-text-dark);
-  
+
   @media (max-width: 768px) {
     font-size: 14px;
   }
@@ -71,4 +58,3 @@
     opacity: 0.7;
   }
 }
-

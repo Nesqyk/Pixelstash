@@ -19,6 +19,15 @@ export const metadata = {
   keywords: ["pixel art", "game assets", "pixel art resources", "game development", "pixel art tools", "curated resources"],
   authors: [{ name: "Tyrone Tabornal" }],
   creator: "Tyrone Tabornal",
+  icons: {
+    icon: [
+      { url: "/logo_stash.svg", type: "image/svg+xml" },
+      // { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/logo_stash.svg", type: "image/svg+xml" },
+    ],
+  },
   openGraph: {
     title: "Pixelstash - Curated Pixel Art Resources",
     description: "Discover high-quality, curated pixel art resources including tools, asset packs, and tutorials.",
@@ -26,7 +35,7 @@ export const metadata = {
     siteName: "Pixelstash",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/splash_page.png",
         width: 1200,
         height: 630,
         alt: "Pixelstash - Curated Pixel Art Resources",
@@ -39,7 +48,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Pixelstash - Curated Pixel Art Resources",
     description: "Discover high-quality, curated pixel art resources including tools, asset packs, and tutorials.",
-    images: ["/og-image.jpg"],
+    images: ["/splash_page.png"],
   },
   robots: {
     index: true,

@@ -1,6 +1,5 @@
 @import '../../../app/global.scss';
 
-// Modal Layout Styles
 .leftSidebar {
   width: 507px;
   flex-shrink: 0;
@@ -10,7 +9,22 @@
   height: 682px;
   position: sticky;
   top: 0;
-  align-self: flex-start; 
+  align-self: flex-start;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 16px;
+  }
 }
 
 .sidebarContent {
@@ -21,6 +35,23 @@
   padding: 64px;
   border: 3px solid var(--color-dark-mustard);
   border-radius: 8px;
+
+  @media (max-width: 1200px) {
+    padding: 48px;
+    gap: 48px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 32px;
+    gap: 32px;
+    border-width: 2px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 24px;
+    gap: 24px;
+    border-radius: 6px;
+  }
 }
 
 .iconContainer {
@@ -33,6 +64,21 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  @media (max-width: 1200px) {
+    width: 240px;
+    height: 240px;
+  }
+
+  @media (max-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (max-width: 480px) {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 .iconImage {
@@ -55,6 +101,20 @@
   color: var(--color-text-dark);
   margin: 0;
   line-height: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  @media (max-width: 1200px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
 }
 
 .badgesRow {
@@ -117,6 +177,23 @@
   flex-direction: column;
   height: 709px;
   position: relative;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    max-height: 70vh;
+  }
+
+  @media (max-width: 768px) {
+    gap: 24px;
+    max-height: 65vh;
+  }
+
+  @media (max-width: 480px) {
+    gap: 20px;
+    max-height: 60vh;
+  }
 }
 
 .closeButton {
@@ -144,6 +221,33 @@
     width: 24px;
     height: 24px;
   }
+
+  @media (max-width: 1200px) {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 48px;
+    border-width: 2px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 48px;
+    height: 40px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 
 .scrollableContent {
@@ -154,8 +258,21 @@
   gap: 39px;
   padding-right: 8px;
 
+  @media (max-width: 768px) {
+    gap: 28px;
+    padding-right: 4px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 24px;
+  }
+
   &::-webkit-scrollbar {
     width: 8px;
+
+    @media (max-width: 768px) {
+      width: 6px;
+    }
   }
 
   &::-webkit-scrollbar-track {
@@ -165,10 +282,10 @@
   &::-webkit-scrollbar-thumb {
     background: var(--color-dark-mustard);
     border-radius: 4px;
-  }
 
-  &::-webkit-scrollbar-thumb:hover {
-    background: var(--color-charcoal);
+    &:hover {
+      background: var(--color-charcoal);
+    }
   }
 }
 
@@ -179,27 +296,42 @@
   color: var(--color-text-dark);
   line-height: 1.5;
   white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  @media (max-width: 1200px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
 
   p {
     margin: 0 0 1em 0;
-    
-    &:last-child {
-      margin-bottom: 0;
-    }
+    &:last-child { margin-bottom: 0; }
   }
 
   ul, ol {
     margin: 1em 0;
     padding-left: 1.5em;
+
+    @media (max-width: 480px) {
+      padding-left: 1.2em;
+    }
   }
 
-  li {
-    margin: 0.5em 0;
-  }
+  li { margin: 0.5em 0; }
 }
 
-// Details Section
-.detailsSection {
+.detailsSection, 
+.tagsSection, 
+.additionalInfoSection, 
+.socialSection {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -226,13 +358,16 @@
   font-weight: 400;
   color: var(--color-text-dark);
   line-height: 1.5;
-}
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 
-// Tags Section
-.tagsSection {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
 }
 
 .sectionTitle {
@@ -241,29 +376,17 @@
   font-weight: 700;
   color: var(--color-text-dark);
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
 }
 
-.tagsList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-// Additional Info Section
-.additionalInfoSection {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-// Social Section
-.socialSection {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.socialLinks {
+.tagsList, .socialLinks {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -281,6 +404,10 @@
   display: flex;
   gap: 14px;
   height: 264px;
+
+  @media (max-width: 768px) {
+    height: 200px;
+  }
 }
 
 .screenshotItem {
@@ -323,49 +450,4 @@
   font-family: var(--font-geist-sans), sans-serif;
   font-size: 18px;
   color: var(--color-text-dark);
-}
-
-// Responsive styles
-@media (max-width: 1200px) {
-  .leftSidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
-  .rightContent {
-    width: 100%;
-    height: auto;
-    min-height: 400px;
-  }
-
-  .closeButton {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .sidebarContent {
-    padding: 32px;
-    gap: 40px;
-  }
-
-  .iconContainer {
-    width: 200px;
-    height: 200px;
-  }
-
-  .title {
-    font-size: 36px;
-  }
-
-  .descriptionSection {
-    font-size: 18px;
-  }
-
-  .screenshotsGrid {
-    height: 200px;
-  }
 }

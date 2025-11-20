@@ -1,43 +1,50 @@
-@import '../../../app/global.scss';
+$mobile-breakpoint: 768px;
 
-.logoFull {
-  width: 100%;
-  height: auto;
-  max-width: 536px;
-  display: block;
+.logoLink {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 
-  @media (max-width: 1024px) {
-    max-width: 400px;
+  &:hover {
+    opacity: 0.8;
   }
 
-  @media (max-width: 768px) {
-    max-width: 320px;
-  }
-
-  @media (max-width: 480px) {
-    max-width: 240px;
+  &:focus {
+    outline: 2px solid var(--color-charcoal);
+    outline-offset: 4px;
+    border-radius: 4px;
   }
 }
 
-.logoFooter {
+.logoWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.desktopLogo {
+  display: block; // Visible by default
   width: 100%;
   height: auto;
-  max-width: 90vw;
-  display: block;
+  max-width: 100%;
+  object-fit: contain;
 
-  @media (min-width: 1400px) {
-    max-width: 1200px;
+  @media (max-width: 1000px) {
+    display: none; // Hide on mobile
   }
+}
 
-  @media (max-width: 1024px) {
-    max-width: 85vw;
-  }
+.mobileLogo {
+  display: none; // Hidden by default
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
 
-  @media (max-width: 768px) {
-    max-width: 80vw;
-  }
-
-  @media (max-width: 480px) {
-    max-width: 75vw;
+  @media (max-width: 1000px) {
+    display: block; // Show on mobile
   }
 }

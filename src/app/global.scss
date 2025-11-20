@@ -8,15 +8,10 @@
 
 body {
   margin: 0;
-  width: 100%;
-  overflow: hidden;
-  min-height: 100vh;
+  overflow-x: hidden;
+  height: 100vh;
   background-color: var(--color-mustard);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
 }
 
-// Responsive container for main content
+
 

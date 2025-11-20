@@ -1,6 +1,5 @@
 "use client"
 
-import ResourceCard from "@/components/common/Card";
 import Footer from "@/components/layout/Footer";
 import Landing from "@/components/layout/Landing";
 import ResourcesSection from "@/components/layout/Landing/ResourcesSection";
@@ -38,8 +37,8 @@ export default function Home() {
   return (
     <div data-scroll-container > 
       <Landing/>
-      <ResourcesSection></ResourcesSection>
-      <Footer></Footer>
+      <ResourcesSection/>
+      <Footer/>
     </div>
   );
 }

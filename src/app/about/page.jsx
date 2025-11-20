@@ -2,13 +2,12 @@
 
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
-import Link from "next/link";
 import style from "./style.module.scss";
 
 const ABOUT_CONTENT = {
   title: "ABOUT",
   author: "Tyrone Tabornal",
-  authorImage: "/profile.jpg",
+  authorImage: "/tyrone_mt.png",
   linkedinUrl: "https://linkedin.com/in/tyrone",
   text: [
     "Hey, I'm Tyrone Tabornal. As a freelance pixel artist and IT student, I spent so much time hunting for good tools, asset packs, and tutorials. I was tired of sifting through hundreds of links just to find one or two good resources.",
@@ -43,19 +42,7 @@ export default function About() {
                   alt={ABOUT_CONTENT.author}
                   className={style.image}
                 />
-                <Link 
-                  href={ABOUT_CONTENT.linkedinUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={style.linkedinButton}
-                  aria-label="Visit Tyrone Tabornal's LinkedIn"
-                >
-                  <img 
-                    src="/linkedin.svg" 
-                    alt="LinkedIn" 
-                    className={style.linkedinIcon}
-                  />
-                </Link>
+                
               </div>
             </aside>
 
