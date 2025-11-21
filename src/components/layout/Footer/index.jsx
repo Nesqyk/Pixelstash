@@ -6,8 +6,8 @@ import StaggerTextButton from "@/components/common/StaggerButton";
 const FOOTER_LINKS = [
     { label: "ABOUT", href: "/about", external: false },
     { label: "LEGAL", href: "/legal", external: false },
-    { label: "SUPPORT", href: "/support", external: false },
-    { label: "FEEDBACK", href: "/feedback", external: false }
+    { label: "SUPPORT", href: "https://ko-fi.com/nesqyk", external: true },
+    { label: "FEEDBACK", href: "https://forms.gle/CnJfJofFVNYtFfcF8", external: true }
 ];
 
 export default function Footer() {

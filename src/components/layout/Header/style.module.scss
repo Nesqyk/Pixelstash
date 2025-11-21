@@ -4,7 +4,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
+    max-width: min(1300px, 90vw);
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.nav {
+    display: flex;
+    gap: 4px;
 }
 
 .hideOnMobile {
