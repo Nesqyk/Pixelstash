@@ -1,13 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Gasoek_One } from "next/font/google";
 import Script from "next/script";
-import style from './global.scss'
 
 const gasoekOne = Gasoek_One({
   variable: "--font-gasoek-one",
-  weight:"400",
+  weight: "400",
   subsets: ["latin"],
-})
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +14,8 @@ const geistSans = Geist({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://pixelstash.netlify.app'), 
+  
   title: "Pixelstash - Curated Pixel Art Resources",
   description: "Discover high-quality, curated pixel art resources including tools, asset packs, and tutorials. Built for pixel artists and game developers.",
   keywords: ["pixel art", "game assets", "pixel art resources", "game development", "pixel art tools", "curated resources"],
@@ -23,7 +24,6 @@ export const metadata = {
   icons: {
     icon: [
       { url: "/logo_stash.svg", type: "image/svg+xml" },
-      // { url: "/favicon.ico", sizes: "any" },
     ],
     apple: [
       { url: "/logo_stash.svg", type: "image/svg+xml" },
@@ -32,11 +32,11 @@ export const metadata = {
   openGraph: {
     title: "Pixelstash - Curated Pixel Art Resources",
     description: "Discover high-quality, curated pixel art resources including tools, asset packs, and tutorials.",
-    url: "https://pixelstash.netlify.app/",
+    url: "/", 
     siteName: "Pixelstash",
     images: [
       {
-        url: "https://pixelstash.netlify.app/splash_page.png",
+        url: "/splash_page.png", 
         width: 1200,
         height: 630,
         alt: "Pixelstash - Curated Pixel Art Resources",
