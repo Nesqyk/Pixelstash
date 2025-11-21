@@ -32,11 +32,11 @@ export const metadata = {
   openGraph: {
     title: "Pixelstash - Curated Pixel Art Resources",
     description: "Discover high-quality, curated pixel art resources including tools, asset packs, and tutorials.",
-    url: "https://pixelstash.com",
+    url: "https://pixelstash.netlify.app/",
     siteName: "Pixelstash",
     images: [
       {
-        url: "/splash_page.png",
+        url: "https://pixelstash.netlify.app/splash_page.png",
         width: 1200,
         height: 630,
         alt: "Pixelstash - Curated Pixel Art Resources",
