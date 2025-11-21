@@ -25,6 +25,7 @@ const LEGAL_CONTENT = {
       content: [
         "Pixelstash respects your privacy. We do not collect personal information unless you voluntarily provide it.",
         "We may use cookies or similar technologies to improve your browsing experience. You can disable cookies in your browser settings.",
+        "We use Google Analytics (GA4) to collect aggregated usage and demographic insights so we can understand which resources are most helpful. Google Analytics stores this data in an anonymized form and does not give us access to personal information.",
         "We do not sell or share your personal information with third parties.",
         "If you contact us through the site, we may use your contact information to respond to your inquiry.",
         "This privacy policy may be updated from time to time. Continued use of the site constitutes acceptance of any changes."
