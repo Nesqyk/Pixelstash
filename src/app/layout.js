@@ -63,7 +63,7 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: "https://pixelstash.com",
+    canonical: "https://pixelstash.netlify.app",
   },
 };
 
