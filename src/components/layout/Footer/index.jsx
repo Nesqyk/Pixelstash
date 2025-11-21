@@ -7,7 +7,8 @@ const FOOTER_LINKS = [
     { label: "ABOUT", href: "/about", external: false },
     { label: "LEGAL", href: "/legal", external: false },
     { label: "SUPPORT", href: "https://ko-fi.com/nesqyk", external: true },
-    { label: "FEEDBACK", href: "https://forms.gle/CnJfJofFVNYtFfcF8", external: true }
+    { label: "FEEDBACK", href: "https://forms.gle/CnJfJofFVNYtFfcF8", external: true },
+    { label: "CONTRIBUTE", href: "https://github.com/Nesqyk/Pixelstash", external: true }
 ];
 
 export default function Footer() {

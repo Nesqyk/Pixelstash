@@ -29,6 +29,7 @@ export default function CategoryFilter({ onFilterChange, selectedCategory = 'All
   return (
     <div className={style.categoryFilter} ref={dropdownRef}>
       <button
+        type="button"
         className={style.filterButton}
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
@@ -56,6 +57,7 @@ export default function CategoryFilter({ onFilterChange, selectedCategory = 'All
       {isOpen && (
         <div className={style.dropdown}>
           <button
+            type="button"
             className={`${style.dropdownItem} ${selectedCategory === 'All Categories' ? style.active : ''}`}
             onClick={() => handleSelect('All Categories')}
           >
@@ -64,6 +66,7 @@ export default function CategoryFilter({ onFilterChange, selectedCategory = 'All
           {RESOURCE_TYPES.map((type) => (
             <button
               key={type}
+              type="button"
               className={`${style.dropdownItem} ${selectedCategory === type ? style.active : ''}`}
               onClick={() => handleSelect(type)}
             >
