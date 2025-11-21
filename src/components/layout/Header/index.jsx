@@ -5,7 +5,6 @@ import Button from "@/components/common/Button";
 import Logo from "@/components/common/Logo";
 import Link from "next/link";
 import styles from "./style.module.scss";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +23,8 @@ export default function Header() {
         {
             label: "SUBMIT RESOURCES",
             cta: true,
-            href: "/submit"
+            href: "https://forms.gle/tUdzWVbs5a4pSeAs9",
+            external: true
         }
     ];
 
@@ -35,17 +35,35 @@ export default function Header() {
             </div>
 
             <div className={styles.nav}>
-                {navItems.map((item, index) => (
-                    <Link
-                        key={index}
-                        href={item.href}
-                        className={item.className || ""}
-                    >
-                        <Button cta={item.cta}>
-                            {item.label}
-                        </Button>
-                    </Link>
-                ))}
+                {navItems.map((item, index) => {
+                    if (item.external) {
+                        return (
+                            <a
+                                key={index}
+                                href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={item.className || ""}
+                            >
+                                <Button cta={item.cta}>
+                                    {item.label}
+                                </Button>
+                            </a>
+                        );
+                    }
+                    
+                    return (
+                        <Link
+                            key={index}
+                            href={item.href}
+                            className={item.className || ""}
+                        >
+                            <Button cta={item.cta}>
+                                {item.label}
+                            </Button>
+                        </Link>
+                    );
+                })}
             </div>
 
             {/* <button
