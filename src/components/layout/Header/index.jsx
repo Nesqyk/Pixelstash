@@ -5,6 +5,7 @@ import Button from "@/components/common/Button";
 import Logo from "@/components/common/Logo";
 import Link from "next/link";
 import styles from "./style.module.scss";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,7 +67,7 @@ export default function Header() {
                 })}
             </div>
 
-            {/* <button
+            <button
                 className={`${styles.hamburger} ${isMenuOpen ? styles.active : ''}`}
                 onClick={toggleMenu}
                 aria-label="Toggle menu"
@@ -86,10 +87,18 @@ export default function Header() {
                         transition={{ duration: 0.3 }}
                     >
                         <Link href="/about" onClick={toggleMenu} className={styles.mobileLink}>ABOUT</Link>
-                        <Link href="/submit" onClick={toggleMenu} className={styles.mobileLink}>SUBMIT RESOURCES</Link>
+                        <a
+                            href="https://forms.gle/tUdzWVbs5a4pSeAs9"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={toggleMenu}
+                            className={styles.mobileLink}
+                        >
+                            SUBMIT RESOURCES
+                        </a>
                     </motion.div>
                 )}
-            </AnimatePresence> */}
+            </AnimatePresence>
         </section>
     );
 }
