@@ -54,6 +54,7 @@ export default function ResourceModal({ isOpen, onClose, resourceSlug, resourceD
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
+    // eslint-disable-next-line
     setIsMounted(true)
   }, [])
 
